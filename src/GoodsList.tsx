@@ -19,7 +19,7 @@ const getColorValue = (colorName: string): string => {
   }
 };
 
-export const GoodsList: React.FC<Props> = ({ goods }) => (
+const GoodsList: React.FC<Props> = ({ goods }) => (
   <ul>
     {goods.map(good => (
       <li
@@ -32,3 +32,6 @@ export const GoodsList: React.FC<Props> = ({ goods }) => (
     ))}
   </ul>
 );
+
+// Applying rendering optimization with React.memo
+export default React.memo(GoodsList);
